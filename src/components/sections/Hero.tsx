@@ -105,11 +105,9 @@ const Hero = () => {
               contactText="Connect"
               showUserInfo={false}
               enableTilt={true}
-              behindGlowEnabled={true}
-              behindGlowColor="hsla(270, 91%, 65%, 0.7)"
-              behindGlowSize="60%"
+              behindGlowEnabled={false}
               iconUrl="data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='grid' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 20 0 L 0 0 0 20' fill='none' stroke='hsl(270, 91%%, 65%%)' stroke-width='0.5' opacity='0.3'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23grid)'/%3E%3C/svg%3E"
-              innerGradient="linear-gradient(145deg, hsl(270 91% 65% / 0.6) 0%, hsl(280 100% 70% / 0.3) 50%, hsl(260 80% 55% / 0.2) 100%)"
+              innerGradient="none"
               miniAvatarUrl={undefined}
               onContactClick={scrollToContact}
             />
