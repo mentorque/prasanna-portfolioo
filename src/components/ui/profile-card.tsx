@@ -15,7 +15,29 @@ const clamp = (v, min = 0, max = 100) => Math.min(Math.max(v, min), max);
 const round = (v, precision = 3) => parseFloat(v.toFixed(precision));
 const adjust = (v, fMin, fMax, tMin, tMax) => round(tMin + ((tMax - tMin) * (v - fMin)) / (fMax - fMin));
 
-const ProfileCardComponent = ({
+export interface ProfileCardProps {
+  avatarUrl?: string;
+  iconUrl?: string;
+  grainUrl?: string;
+  innerGradient?: string;
+  behindGlowEnabled?: boolean;
+  behindGlowColor?: string;
+  behindGlowSize?: string;
+  className?: string;
+  enableTilt?: boolean;
+  enableMobileTilt?: boolean;
+  mobileTiltSensitivity?: number;
+  miniAvatarUrl?: string;
+  name?: string;
+  title?: string;
+  handle?: string;
+  status?: string;
+  contactText?: string;
+  showUserInfo?: boolean;
+  onContactClick?: () => void;
+}
+
+const ProfileCardComponent: React.FC<ProfileCardProps> = ({
   avatarUrl = '<Placeholder for avatar URL>',
   iconUrl = '<Placeholder for icon URL>',
   grainUrl = '<Placeholder for grain URL>',
@@ -246,7 +268,9 @@ const ProfileCardComponent = ({
 
     const handleClick = () => {
       if (!enableMobileTilt || location.protocol !== 'https:') return;
-      const anyMotion = window.DeviceMotionEvent;
+      const anyMotion = window.DeviceMotionEvent as unknown as {
+        requestPermission?: () => Promise<'granted' | 'denied'>;
+      };
       if (anyMotion && typeof anyMotion.requestPermission === 'function') {
         anyMotion
           .requestPermission()
@@ -289,14 +313,14 @@ const ProfileCardComponent = ({
     handleDeviceOrientation
   ]);
 
-  const cardStyle = useMemo(
+  const cardStyle = useMemo<React.CSSProperties>(
     () => ({
       '--icon': iconUrl ? `url(${iconUrl})` : 'none',
       '--grain': grainUrl ? `url(${grainUrl})` : 'none',
       '--inner-gradient': innerGradient ?? DEFAULT_INNER_GRADIENT,
       '--behind-glow-color': behindGlowColor ?? 'rgba(125, 190, 255, 0.67)',
       '--behind-glow-size': behindGlowSize ?? '50%'
-    }),
+    } as React.CSSProperties),
     [iconUrl, grainUrl, innerGradient, behindGlowColor, behindGlowSize]
   );
 
@@ -319,7 +343,7 @@ const ProfileCardComponent = ({
                 alt={`${name || 'User'} avatar`}
                 loading="lazy"
                 onError={e => {
-                  const t = e.target;
+                  const t = e.currentTarget;
                   t.style.display = 'none';
                 }}
               />
@@ -332,7 +356,7 @@ const ProfileCardComponent = ({
                         alt={`${name || 'User'} mini avatar`}
                         loading="lazy"
                         onError={e => {
-                          const t = e.target;
+                          const t = e.currentTarget;
                           t.style.opacity = '0.5';
                           t.src = avatarUrl;
                         }}

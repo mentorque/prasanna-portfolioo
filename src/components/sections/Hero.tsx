@@ -45,40 +45,56 @@ const Hero = () => {
               <span className="text-muted-foreground text-sm font-body">Dublin, Ireland</span>
             </motion.div>
 
-            <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.6 }} className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-4 leading-tight">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-4 leading-tight tracking-tight"
+            >
               <span className="text-foreground">Hi, I'm </span>
               <span className="text-gradient">Prasanna Kumar</span>
             </motion.h1>
 
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.6 }} className="text-xl sm:text-2xl lg:text-3xl font-display font-medium mb-6 flex flex-wrap items-center gap-2">
-              <LayoutGroup>
-                <motion.p className="flex whitespace-pre" layout>
-                  <motion.span className="pt-0.5 sm:pt-1" layout transition={{ type: "spring", damping: 30, stiffness: 400 }}>
-                    I specialize in {" "}
-                  </motion.span>
-                  <TextRotate
-                    texts={["customer success.", "security operations.", "technical support.", "B2B sales.", "incident handling."]}
-                    mainClassName="text-white px-2 sm:px-3 bg-primary overflow-hidden py-0.5 sm:py-1 justify-center rounded-lg"
-                    staggerFrom={"last"}
-                    initial={{ y: "100%" }}
-                    animate={{ y: 0 }}
-                    exit={{ y: "-120%" }}
-                    staggerDuration={0.025}
-                    splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1"
-                    transition={{ type: "spring", damping: 30, stiffness: 400 }}
-                    rotationInterval={2000}
-                  />
-                </motion.p>
-              </LayoutGroup>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="text-xl sm:text-2xl lg:text-3xl font-display font-medium mb-6 flex items-center gap-2 sm:gap-3 whitespace-nowrap flex-nowrap text-foreground"
+            >
+              <span className="shrink-0 text-foreground">I specialize in</span>
+              <TextRotate
+                texts={[
+                  "B2B sales.",
+                  "deal closing.",
+                  "revenue growth.",
+                  "partner outreach.",
+                  "lead qualification.",
+                  "consultative selling."
+                ]}
+                mainClassName="text-white px-2.5 sm:px-3.5 bg-primary overflow-hidden py-0.5 sm:py-1 justify-center rounded-lg inline-flex flex-nowrap whitespace-nowrap shrink-0"
+                staggerFrom={"last"}
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                exit={{ y: "-120%" }}
+                staggerDuration={0.02}
+                splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 whitespace-nowrap flex-nowrap"
+                transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                rotationInterval={2200}
+              />
             </motion.div>
 
-            <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5, duration: 0.6 }} className="text-muted-foreground text-base sm:text-lg mb-8 max-w-xl font-body leading-relaxed">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              className="text-muted-foreground text-base sm:text-lg mb-8 max-w-xl font-body leading-relaxed"
+            >
               Sales and customer service professional with cybersecurity certifications. Experienced in customer engagement, needs-based product explanation, sales target delivery, and GDPR-aligned customer data handling.
             </motion.p>
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6, duration: 0.6 }} className="flex flex-wrap gap-4 mb-8">
               <ButtonCta label="Get In Touch" onClick={scrollToContact} className="w-auto" />
-              <ButtonCta label="View Experience" onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })} className="w-auto" />
+              <ButtonCta label="View Sales Experience" onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })} className="w-auto" />
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7, duration: 0.6 }} className="flex gap-4">
@@ -98,13 +114,15 @@ const Hero = () => {
             <ProfileCard
               avatarUrl="/prasanna.png"
               name="Prasanna Kumar"
-              title="Sales & Security Professional"
+              title="B2B Sales & Account Executive"
               handle="prasannakumar"
               status="Open to Opportunities"
               contactText="Connect"
               showUserInfo={false}
               enableTilt={true}
               behindGlowEnabled={false}
+              behindGlowColor="transparent"
+              behindGlowSize="0%"
               iconUrl="data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='grid' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 20 0 L 0 0 0 20' fill='none' stroke='hsl(270, 91%%, 65%%)' stroke-width='0.5' opacity='0.3'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23grid)'/%3E%3C/svg%3E"
               innerGradient="none"
               miniAvatarUrl={undefined}

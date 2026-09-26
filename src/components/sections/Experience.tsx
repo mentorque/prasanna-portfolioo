@@ -37,7 +37,7 @@ const Experience = () => {
       <div className="section-container">
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-100px' }} transition={{ duration: 0.6 }} className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4"><span className="text-gradient">Work Experience</span></h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto font-body">Delivering accurate data, reducing operational risk, and improving analytics for institutional stakeholders.</p>
+          <p className="text-muted-foreground max-w-2xl mx-auto font-body">Proven track record of surpassing weekly revenue quotas, acquiring high-value B2B distribution partners, and managing full-cycle sales pipelines.</p>
         </motion.div>
 
         <div className="max-w-4xl mx-auto space-y-8">

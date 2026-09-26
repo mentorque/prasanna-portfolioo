@@ -2,8 +2,8 @@ import { motion } from 'framer-motion';
 import { GraduationCap } from 'lucide-react';
 
 const education = [
-  { degree: "Master's Degree", school: 'Your University', details: 'Dublin, Ireland', period: '2022 – 2024', icon: GraduationCap },
-  { degree: "Bachelor's Degree", school: 'Your Undergraduate University', details: 'Your City, Country', period: '2018 – 2022', icon: GraduationCap },
+  { degree: 'MSc, Information Systems & Computing (NFQ Level 9)', school: 'Dublin Business School', details: 'Dublin, Ireland', period: 'Sep 2024 – Sep 2025', icon: GraduationCap },
+  { degree: 'B.E., Electronics & Communication Engineering (NFQ Level 8)', school: 'PSG College of Technology', details: 'Coimbatore, India', period: 'Jul 2021 – Apr 2024', icon: GraduationCap },
 ];
 
 const Education = () => {
