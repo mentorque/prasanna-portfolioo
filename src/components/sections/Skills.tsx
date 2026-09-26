@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 
 const skillCategories = [
-  { title: 'Core Skills', color: 'from-purple-500 to-purple-600', skills: ['Communication', 'Problem Solving', 'Critical Thinking', 'Organisation', 'Adaptability', 'Initiative'] },
-  { title: 'Professional', color: 'from-purple-600 to-purple-700', skills: ['Project Management', 'Presentation', 'Research', 'Report Writing', 'Planning', 'Collaboration'] },
-  { title: 'Technical & Tools', color: 'from-purple-500 to-violet-600', skills: ['Excel', 'Power BI', 'SQL', 'Python', 'Bloomberg', 'Financial Modelling'] },
+  { title: 'B2B & Direct Sales', color: 'from-purple-500 to-purple-600', skills: ['B2B Prospecting', 'Target-Driven Sales', 'BANT Qualification', 'Consultative Selling', 'Deal Closing', 'Pipeline Management', 'Weekly Quota (€27k+)'] },
+  { title: 'Account & Client Growth', color: 'from-purple-600 to-purple-700', skills: ['Partner Onboarding', 'Account Portfolio Growth', 'Upselling & Cross-Selling', 'In-Store Merchandising', 'Commercial Agreements', 'Client Relations'] },
+  { title: 'CRM & Sales Operations', color: 'from-purple-500 to-violet-600', skills: ['Salesforce Service Cloud', 'Pipeline Forecasting', 'GDPR Compliance', 'Lead Qualification', 'Technical Product Translation', 'Incident Triage'] },
 ];
 
 const Skills = () => {
@@ -11,8 +11,8 @@ const Skills = () => {
     <section id="skills" className="py-24 relative">
       <div className="section-container">
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-100px' }} transition={{ duration: 0.6 }} className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4"><span className="text-gradient">Skills & Expertise</span></h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto font-body">A balanced mix of analytical, technical, and interpersonal capabilities.</p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4"><span className="text-gradient">Sales & Core Expertise</span></h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto font-body">Proven capabilities across target-driven sales cycles, partner prospecting, account expansion, and Salesforce CRM management.</p>
         </motion.div>
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
           {skillCategories.map((category, index) => (
