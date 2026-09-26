@@ -15,10 +15,10 @@ const Contact = () => {
           <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-50px' }} transition={{ duration: 0.6 }} className="glass-card rounded-3xl p-8 sm:p-12 text-center">
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
               {[
-                { icon: Mail, label: 'Email', value: 'your.email@example.com', href: 'mailto:your.email@example.com' },
-                { icon: Linkedin, label: 'LinkedIn', value: '/your-profile', href: 'https://www.linkedin.com/in/your-profile', external: true },
-                { icon: Phone, label: 'Phone', value: '+353 00 000 0000', href: 'tel:+353000000000' },
-                { icon: MapPin, label: 'Location', value: 'Your City, Country', href: null },
+                { icon: Mail, label: 'Email', value: 'prasanna80564@gmail.com', href: 'mailto:prasanna80564@gmail.com' },
+                { icon: Linkedin, label: 'LinkedIn', value: 'Prasanna Kumar', href: 'https://www.linkedin.com/in/prasannakumarsurendran', external: true },
+                { icon: Phone, label: 'Phone', value: '+353 89 958 2880', href: 'tel:+353899582880' },
+                { icon: MapPin, label: 'Location', value: 'Dublin, Ireland', href: null },
               ].map((item) => (
                 item.href ? (
                   <a key={item.label} href={item.href} target={item.external ? '_blank' : undefined} rel="noopener noreferrer" className="group p-4 rounded-xl bg-secondary hover:bg-primary/10 transition-all duration-300">
@@ -26,7 +26,7 @@ const Contact = () => {
                       <div className="p-3 rounded-full bg-primary/10 border border-primary/30 group-hover:scale-110 transition-transform"><item.icon className="w-5 h-5 text-primary" /></div>
                       <div>
                         <p className="text-xs text-muted-foreground mb-1 font-body">{item.label}</p>
-                        <p className="text-sm font-medium text-foreground font-display flex items-center gap-1 justify-center">{item.value}{item.external && <ArrowUpRight className="w-3 h-3 text-primary" />}</p>
+                        <p className="text-sm font-medium text-foreground font-display flex items-center gap-1 justify-center break-all">{item.value}{item.external && <ArrowUpRight className="w-3 h-3 text-primary" />}</p>
                       </div>
                     </div>
                   </a>
@@ -36,7 +36,7 @@ const Contact = () => {
                       <div className="p-3 rounded-full bg-primary/10 border border-primary/30"><item.icon className="w-5 h-5 text-primary" /></div>
                       <div>
                         <p className="text-xs text-muted-foreground mb-1 font-body">{item.label}</p>
-                        <p className="text-sm font-medium text-foreground font-display">{item.value}</p>
+                        <p className="text-sm font-medium text-foreground font-display break-all">{item.value}</p>
                       </div>
                     </div>
                   </div>
@@ -44,8 +44,8 @@ const Contact = () => {
               ))}
             </div>
             <div className="flex flex-wrap justify-center gap-4">
-              <GradientButton asChild><a href="mailto:your.email@example.com"><Mail className="w-4 h-4 mr-2" />Send Email</a></GradientButton>
-              <GradientButton variant="variant" asChild><a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer"><Linkedin className="w-4 h-4 mr-2" />Connect on LinkedIn</a></GradientButton>
+              <GradientButton asChild><a href="mailto:prasanna80564@gmail.com"><Mail className="w-4 h-4 mr-2" />Send Email</a></GradientButton>
+              <GradientButton variant="variant" asChild><a href="https://www.linkedin.com/in/prasannakumarsurendran" target="_blank" rel="noopener noreferrer"><Linkedin className="w-4 h-4 mr-2" />Connect on LinkedIn</a></GradientButton>
             </div>
           </motion.div>
         </div>

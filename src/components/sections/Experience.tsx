@@ -3,17 +3,31 @@ import { Briefcase, Calendar } from 'lucide-react';
 
 const experiences = [
   {
-    title: 'Data Analyst',
-    company: 'Financial Data Services Ltd.',
-    period: 'May 2022 – Aug 2024',
+    title: 'Sales & Customer Service Colleague',
+    company: 'Currys PC World',
+    period: 'Oct 2024 – Present',
     highlights: [
-      'Analysed and validated 500+ securities weekly, resolving 20+ exceptions to improve data quality for downstream systems',
-      'Reduced operational risk by ~15% through structured reconciliation frameworks across critical datasets',
-      'Maintained 100% SLA compliance for critical data deliveries supporting institutional clients',
-      'Processed and verified 1,000+ annual rating updates, ensuring consistency for risk assessment',
-      'Developed 50+ automated validation rules, cutting manual review time by ~30%',
-      'Documented 75+ data fields and controls, reducing onboarding time for new team members by ~40%',
-    ]
+      'Drove end-to-end sales cycle by prospecting customer needs, presenting tailored solutions, and consistently exceeding a €27,000 weekly sales target.',
+      'Qualified leads using BANT methodology to assess budget, authority, need, and timeline, converting conversations into closed opportunities.',
+      'Expanded B2B account portfolio with local business owners and sole traders, delivering solutions that increased repeat business.',
+      'Logged interactions and managed pipeline stages daily in Salesforce Service Cloud to support accurate forecasting and reporting.',
+      'Upsold protection plans and add-on services at point of sale, increasing average deal value and consistently achieving attachment targets.',
+      'Delivered consultative sales conversations as a certified Sky Expert, qualifying customer needs and driving recurring revenue.'
+    ],
+    logo: '/currysplc_logo.jpeg'
+  },
+  {
+    title: 'B2B Field Sales Executive',
+    company: 'Lyca Mobile Group',
+    period: 'Nov 2024 – Oct 2025',
+    highlights: [
+      'Prospected and onboarded 10+ new B2B distribution partners monthly through cold-calling, in-person visits, and mapped outreach, expanding market presence by 10% each month.',
+      'Managed the full account-opening cycle from initial contact to commercial agreement and onboarding, building strong partner relationships.',
+      'Led in-store branding and merchandising for new retail partners, setting up displays and promotional materials to drive product visibility.',
+      'Provided technical support for network and SIM connectivity issues, translating technical data into clear guidance for partners and customers.',
+      'Maintained CRM and account records in compliance with GDPR, ensuring accurate pipeline and account reporting.'
+    ],
+    logo: '/lycamobile_logo.jpeg'
   }
 ];
 
@@ -41,7 +55,7 @@ const Experience = () => {
                   <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6">
                     <div>
                       <div className="flex items-center gap-3 mb-2">
-                        <div className="p-2 rounded-lg bg-primary/10 border border-primary/30"><Briefcase className="w-5 h-5 text-primary" /></div>
+                        {exp.logo ? <img src={exp.logo} alt={exp.company} className="w-10 h-10 object-contain rounded bg-white" /> : <div className="p-2 rounded-lg bg-primary/10 border border-primary/30"><Briefcase className="w-5 h-5 text-primary" /></div>}
                         <h3 className="text-xl sm:text-2xl font-display font-semibold text-foreground">{exp.title}</h3>
                       </div>
                       <p className="text-primary font-medium">{exp.company}</p>

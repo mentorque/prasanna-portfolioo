@@ -47,17 +47,17 @@ const Hero = () => {
 
             <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.6 }} className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-4 leading-tight">
               <span className="text-foreground">Hi, I'm </span>
-              <span className="text-gradient">Your Name</span>
+              <span className="text-gradient">Prasanna Kumar</span>
             </motion.h1>
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.6 }} className="text-xl sm:text-2xl lg:text-3xl font-display font-medium mb-6 flex flex-wrap items-center gap-2">
               <LayoutGroup>
                 <motion.p className="flex whitespace-pre" layout>
                   <motion.span className="pt-0.5 sm:pt-1" layout transition={{ type: "spring", damping: 30, stiffness: 400 }}>
-                    I create impact {" "}
+                    I specialize in {" "}
                   </motion.span>
                   <TextRotate
-                    texts={["with teams.", "through work.", "with focus.", "every day.", "with purpose.", "together."]}
+                    texts={["customer success.", "security operations.", "technical support.", "B2B sales.", "incident handling."]}
                     mainClassName="text-white px-2 sm:px-3 bg-primary overflow-hidden py-0.5 sm:py-1 justify-center rounded-lg"
                     staggerFrom={"last"}
                     initial={{ y: "100%" }}
@@ -73,8 +73,7 @@ const Hero = () => {
             </motion.div>
 
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5, duration: 0.6 }} className="text-muted-foreground text-base sm:text-lg mb-8 max-w-xl font-body leading-relaxed">
-              Dedicated professional with 3+ years of experience solving complex problems, improving processes,
-              and supporting teams with clear communication, reliable delivery, and a focus on results.
+              Sales and customer service professional with cybersecurity certifications. Experienced in customer engagement, needs-based product explanation, sales target delivery, and GDPR-aligned customer data handling.
             </motion.p>
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6, duration: 0.6 }} className="flex flex-wrap gap-4 mb-8">
@@ -83,13 +82,13 @@ const Hero = () => {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7, duration: 0.6 }} className="flex gap-4">
-              <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-secondary hover:bg-primary/20 hover:shadow-glow transition-all duration-300 group" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/prasannakumarsurendran" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-secondary hover:bg-primary/20 hover:shadow-glow transition-all duration-300 group" aria-label="LinkedIn">
                 <Linkedin className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
-              <a href="mailto:your.email@example.com" className="p-3 rounded-full bg-secondary hover:bg-primary/20 hover:shadow-glow transition-all duration-300 group" aria-label="Email">
+              <a href="mailto:prasanna80564@gmail.com" className="p-3 rounded-full bg-secondary hover:bg-primary/20 hover:shadow-glow transition-all duration-300 group" aria-label="Email">
                 <Mail className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
-              <a href="tel:+353000000000" className="p-3 rounded-full bg-secondary hover:bg-primary/20 hover:shadow-glow transition-all duration-300 group" aria-label="Phone">
+              <a href="tel:+353899582880" className="p-3 rounded-full bg-secondary hover:bg-primary/20 hover:shadow-glow transition-all duration-300 group" aria-label="Phone">
                 <Phone className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
             </motion.div>
@@ -97,10 +96,10 @@ const Hero = () => {
 
           <motion.div initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }} className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <ProfileCard
-              avatarUrl="/image.png"
-              name="Your Name"
-              title="Your Title"
-              handle="yourprofile"
+              avatarUrl="/prasanna.png"
+              name="Prasanna Kumar"
+              title="Sales & Security Professional"
+              handle="prasannakumar"
               status="Open to Opportunities"
               contactText="Connect"
               showUserInfo={false}

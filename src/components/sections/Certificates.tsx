@@ -3,11 +3,9 @@ import { Award, ExternalLink } from 'lucide-react';
 import { GradientButton } from '@/components/ui/gradient-button';
 
 const certificates = [
-  { id: 'cert-1', title: 'Certificate One', description: 'Brief description of what this certification covers and the skills it demonstrates.' },
-  { id: 'cert-2', title: 'Certificate Two', description: 'Brief description of what this certification covers and the skills it demonstrates.' },
-  { id: 'cert-3', title: 'Certificate Three', description: 'Brief description of what this certification covers and the skills it demonstrates.' },
-  { id: 'cert-4', title: 'Certificate Four', description: 'Brief description of what this certification covers and the skills it demonstrates.' },
-  { id: 'cert-5', title: 'Certificate Five', description: 'Brief description of what this certification covers and the skills it demonstrates.' },
+  { id: 'cert-1', title: 'SC-200: Security Operations Associate', description: 'Microsoft, Apr 2026' },
+  { id: 'cert-2', title: 'Security+', description: 'CompTIA, Sep 2024' },
+  { id: 'cert-3', title: 'Shield Up Job Simulation', description: 'AIG / Forage, Mar 2025' }
 ];
 
 const Certificates = () => {
@@ -30,9 +28,9 @@ const Certificates = () => {
                   </div>
                 </div>
                 <div className="mt-auto pt-4">
-                  <GradientButton variant="variant" size="sm" className="w-full" type="button" onClick={(e) => e.preventDefault()}>
+                  {/* <GradientButton variant="variant" size="sm" className="w-full" type="button" onClick={(e) => e.preventDefault()}>
                     <ExternalLink className="w-4 h-4" />View certificate
-                  </GradientButton>
+                  </GradientButton> */}
                 </div>
               </div>
             </motion.div>
